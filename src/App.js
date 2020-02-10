@@ -13,6 +13,9 @@ class App extends React.Component {
     };
     this.getQuote = this.getQuote.bind(this);
   }
+  componentDidMount() {
+    this.getQuote();
+  }
   getQuote() {
     axios
       .get("https://simpsons-quotes-api.herokuapp.com/quotes")
